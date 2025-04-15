@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmptyRouteComponent } from './empty-route.component';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('EmptyRouteComponent', () => {
   let component: EmptyRouteComponent;
@@ -8,7 +9,7 @@ describe('EmptyRouteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmptyRouteComponent]
+      imports: [EmptyRouteComponent, provideExperimentalZonelessChangeDetection()]
     })
     .compileComponents();
 
