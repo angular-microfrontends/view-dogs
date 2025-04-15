@@ -17,7 +17,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/view-dogs",
-            "index": "src/index.html",
+            "index": "./node_modules/single-spa-angular/lib/schematics/ng-add/buried-config/index.html",
             "browser": "src/main.ts",
             "polyfills": [],
             "tsConfig": "tsconfig.app.json",
@@ -48,6 +48,7 @@
               ],
               "outputHashing": "all"
             },
+            "outputHashing": "none",
             "development": {
               "optimization": false,
               "extractLicenses": false,

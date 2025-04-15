@@ -32,6 +32,12 @@ importers:
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
+      single-spa:
+        specifier: ^7.0.0-beta.3
+        version: 7.0.0-beta.3
+      single-spa-angular:
+        specifier: 10.0.0-beta.8
+        version: 10.0.0-beta.8(chokidar@4.0.3)(rxjs@7.8.2)(zone.js@0.15.0)
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
@@ -2148,6 +2154,9 @@ packages:
     resolution: {integrity: sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==}
     engines: {node: '>=6'}
 
+  dom-element-getter-helpers@2.0.2:
+    resolution: {integrity: sha512-jmT8RpdIDHRg0AgTu9mfH1ed3m5Xn53Q6zg+NzCK//Imdm3oNQJRsL4LG50wqwPSK4Iy5dd/Knc1gOj1aguZUw==}
+
   dom-serialize@2.2.1:
     resolution: {integrity: sha512-Yra4DbvoW7/Z6LBN560ZwXMjoNOSAN2wRsKFGc4iBeso+mpIA6qj1vfdf9HpMaKAqG6wXTy+1SYEzmNpKXOSsQ==}
 
@@ -3673,6 +3682,12 @@ packages:
   sigstore@3.1.0:
     resolution: {integrity: sha512-ZpzWAFHIFqyFE56dXqgX/DkDRZdz+rRcjoIk/RQU4IX0wiCv1l8S7ZrXDHcCc+uaf+6o7w3h2l3g6GYG5TKN9Q==}
     engines: {node: ^18.17.0 || >=20.5.0}
+
+  single-spa-angular@10.0.0-beta.8:
+    resolution: {integrity: sha512-ffdbWMdeTP1S7ZEMh1IGVtn1j/PjmXvTy+ZtrCdwIEAXb5yexDNaNhRuCtKEDo9XfpwtjX6es0NcDkJAisUg7w==}
+
+  single-spa@7.0.0-beta.3:
+    resolution: {integrity: sha512-uvL704bNHBp/uQ/HZL6KteXVoFCpfpDfBw9s5KCUO9kysoUZHhpEg9SColA9iVjXPyBeR2bEDbKDdXeU98onHw==}
 
   slash@5.1.0:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
@@ -6421,6 +6436,10 @@ snapshots:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
 
+  dom-element-getter-helpers@2.0.2:
+    dependencies:
+      single-spa: 7.0.0-beta.3
+
   dom-serialize@2.2.1:
     dependencies:
       custom-event: 1.0.1
@@ -8089,6 +8108,21 @@ snapshots:
       '@sigstore/verify': 2.1.0
     transitivePeerDependencies:
       - supports-color
+
+  single-spa-angular@10.0.0-beta.8(chokidar@4.0.3)(rxjs@7.8.2)(zone.js@0.15.0):
+    dependencies:
+      '@angular-devkit/core': 19.2.7(chokidar@4.0.3)
+      '@angular-devkit/schematics': 19.2.7(chokidar@4.0.3)
+      '@angular/core': 19.2.6(rxjs@7.8.2)(zone.js@0.15.0)
+      '@schematics/angular': 19.2.7(chokidar@4.0.3)
+      '@types/node': 22.14.1
+      dom-element-getter-helpers: 2.0.2
+    transitivePeerDependencies:
+      - chokidar
+      - rxjs
+      - zone.js
+
+  single-spa@7.0.0-beta.3: {}
 
   slash@5.1.0: {}
 
